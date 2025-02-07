@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add support for Arabic text */
+@font-face {
+  font-family: 'Cairo';
+  src: url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+}
+
+[dir="rtl"] {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* Default left-to-right styles */
+[dir="ltr"] {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth transition for RTL/LTR switching */
+body {
+  transition: all 0.3s ease-in-out;
+}
